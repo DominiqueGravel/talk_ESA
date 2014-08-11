@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Framework}{7}{0}{2}
+\beamer@sectionintoc {3}{Metaweb}{10}{0}{3}
+\beamer@sectionintoc {4}{Distribution}{15}{0}{4}
+\beamer@sectionintoc {5}{Discussion}{18}{0}{5}
