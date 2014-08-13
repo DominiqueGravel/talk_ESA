@@ -23,7 +23,7 @@
 
 	\begin{frame}{Biogeography of ecological interactions}{Challenge of getting network data at large spatial scales}
  	    	\begin{columns}
-			\begin{column}{0.4\textwidth}			
+			\begin{column}{0.35\textwidth}			
 				\begin{itemize}
 					\item Hard to document;
 					\item Usually not replicated;
@@ -32,9 +32,11 @@
 				\end{itemize}
 			\end{column}
 %----
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.65\textwidth}
 				\begin{center}
-					\includegraphics[height=0.55\textheight]{bruegel}\\
+%					\includegraphics[height=0.55\textheight]{bruegel}\\
+					\includegraphics[height=0.55\textheight]{havens_sampling}\\
+					\footnotesize{Gravel et al. (2011). \textit{Ecol. Lett.}}
 				\end{center}
 			\end{column}				
 		\end{columns}	   
@@ -42,19 +44,19 @@
 
 %------------------------------
 
-	\begin{frame}{Biogeography of ecological interactions}
-		\begin{center}
-			\includegraphics[height=0.55\textheight]{havens_sampling}\\
-			\footnotesize{Gravel et al. (2011). \textit{Ecol. Lett.}}
-		\end{center}   
-		\begin{center}
-			\alert{\textbf{How can we predict do local networks assemble from the metaweb?}}
-		\end{center}	 	    
-	\end{frame}
+%	\begin{frame}{Biogeography of ecological interactions}{From the metaweb to local networks}
+%		\begin{center}
+%			\includegraphics[height=0.55\textheight]{havens_sampling}\\
+%			\footnotesize{Gravel et al. (2011). \textit{Ecol. Lett.}}
+%		\end{center}   
+%		\begin{center}
+%			\alert{\textbf{How can we predict network assembly?}}
+%		\end{center}	 	    
+%	\end{frame}
 
 %------------------------------
 
-	\begin{frame}{Biogeography of ecological interactions}
+	\begin{frame}{Biogeography of ecological interactions}{Networks over environmental gradients}
 		\begin{center}
 			\includegraphics[height=0.6\textheight]{havens_ph}\\
 			\footnotesize{Gravel et al. (2011). \textit{Ecol. Lett.}}
@@ -63,7 +65,7 @@
 
 %------------------------------
 
-	\begin{frame}{Spatial variation of interaction networks}
+	\begin{frame}{Spatial variation of interaction networks}{Drivers of network variation}
 		\begin{center}
 			\includegraphics[height=0.45\textheight]{poisot2012}\\
 			\footnotesize{Poisot et al. (2012). \textit{Ecol. Lett.}}
@@ -92,7 +94,7 @@
 
 	\begin{frame}{Framework}{Formulating network sampling as a stochastic process}
 
-	Define the stochastic variable $X_{iz}$ representing the occurrence of species $i$ at the location $z$. \\
+	Define the stochastic variable $X_{iz}$ representing the occurrence of species $i$ at location $z$. \\
 	\vskip 1em
 
 	And the variable $L_{ijz}$ representing the occurrence of an interaction between species $i$ and $j$ at location $z$.	
@@ -110,7 +112,7 @@
 	\begin{frame}{Conditional probabilities}
 	Obtained from the product rule we get:
 		\begin{center}
-			$P(L_{ijz},X_{iz},X_{jz}|E_z) = P(L_{ijx}|X_{ix},X_{jx}|E_z)P(X_{ix},X_{jx}|E_z)$
+			$P(L_{ijz},X_{iz},X_{jz}|E_z) = P(L_{ijx}|X_{ix},X_{jx},E_z)P(X_{ix},X_{jx}|E_z)$
 		\end{center}
 	Where:\\
 	$P(L_{ijz}|X_{iz},X_{jz}|E_z)$ is the metaweb\\
@@ -123,7 +125,7 @@
 	\begin{frame}{Interpretation}
  	    	\begin{columns}
 			\begin{column}{0.3\textwidth}			
-				$P(L_{ijx}|X_{iz},X_{jz}|E_z)$ is the Eltonian niche\\
+				$P(L_{ijx}|X_{iz},X_{jz},E_z)$ is the Eltonian niche\\
 			 	$P(X_{ix},X_{jz}|E_z)$ is the Grinnellian niche
 			\end{column}
 %----
@@ -173,7 +175,7 @@
 
 	\begin{frame}{Probalistic model}
  	    	\begin{columns}
-			\begin{column}{0.4\textwidth}							
+			\begin{column}{0.35\textwidth}							
 				\begin{itemize}
 					\item Data from Barnes et al. (2008), Predator and prey body sizes in marine 						food webs, Ecology 86: 881;
 					\item 34 931 recorded interactions;
@@ -181,10 +183,10 @@
 				\end{itemize}
 			\end{column}
 %----
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.65\textwidth}
 				\begin{center}
 					\includegraphics[height=0.6\textheight]{PredPreyTemp}\\
-					\footnotesize{(see Gibert and Delong (in press) \textit{Bio. Lett.})}
+					\footnotesize{Gibert and Delong (in press) \textit{Bio. Lett.}}
 				\end{center}
 			\end{column}				
 		\end{columns}	   
@@ -193,9 +195,19 @@
 %------------------------------
 
 	\begin{frame}{Effect of temperature on the metaweb}
-		\begin{center}
-				\includegraphics[height=0.65\textheight]{ConnectanceTemp}\\
-		\end{center}
+ 	    	\begin{columns}
+			\begin{column}{0.4\textwidth}							
+%				\begin{center}
+					\includegraphics[height=0.7\textheight]{graph_mw}\\	
+%				\end{center}
+			\end{column}
+%----
+			\begin{column}{0.6\textwidth}
+				\begin{center}
+					\includegraphics[height=0.5\textheight]{ConnectanceTemp}\\	
+				\end{center}
+			\end{column}				
+		\end{columns}	   
 	\end{frame}
 
 %------------------------------
@@ -228,18 +240,26 @@
 
 %------------------------------
 
-	\begin{frame}{Distribution of connectance}
+	\begin{frame}{Distribution}{Metaweb accounting for distribution}
+		\begin{picture}(320,250)
+			\put(20,40){\includegraphics[height=0.9\textheight]{graph_mw_cooc}}
+		\end{picture}
+	\end{frame}
+
+%------------------------------
+
+	\begin{frame}{Mapping connectance}
  	    	\begin{columns}
-			\begin{column}{0.5\textwidth}							
+			\begin{column}{0.55\textwidth}							
 				\begin{center}
-					\includegraphics[height=0.3\textheight]{med_connectance}\\
+					\includegraphics[height=0.38\textheight]{med_connectance}\\
 					\footnotesize{Albouy et al. (2014). \textit{Glob. Change Biol.}}
 				\end{center}
 			\end{column}
 %----
-			\begin{column}{0.5\textwidth}
+			\begin{column}{0.45\textwidth}
 				\begin{center}
-					\includegraphics[height=0.5\textheight]{ConnectanceTempSDM}\\
+					\includegraphics[height=0.43\textheight]{ConnectanceTempSDM}\\
 				\end{center}
 			\end{column}				
 		\end{columns}	   
